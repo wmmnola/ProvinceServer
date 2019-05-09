@@ -19,7 +19,7 @@ class Domain {
      * @param {Board} board the game board
      */
   pickStart(board) {
-      thist.tiles.push(board.getCityTile());
+      this.tiles.push(board.getCityTile());
     }
     /**
      * Updates all the dynamic variables for each turn
@@ -28,6 +28,7 @@ class Domain {
      */
   turnPhase(board) {
     for (let tile of this.tiles) {
+      tile.colonized = true;
       this.money += this.taxEff * tile.collectTaxes();
     }
   }
