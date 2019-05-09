@@ -12,6 +12,7 @@ class Board {
       this.players = [];
       this.humanPlayers = [];
       this.tileCnt = tileCnt;
+      // Creates an empty 2d array to store tiles in. ES6 fuckery is cool
       this.gameBoard = [...Array(this.tileCnt)].map(e => Array(this.tileCnt));
       for (let x = 0; x < this.tileCnt; x++) {
         for (let y = 0; y < this.tileCnt; y++) {
